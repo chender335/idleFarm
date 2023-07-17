@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Player : MonoBehaviour
+public class Walk : MonoBehaviour
 {
 
-    public float jumpForce;
-    public float speed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float speed;
 
     public SpriteRenderer sprite;
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     bool isGround=false;
 
-
+    private void Awake()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void OnCollisionStay2D(Collision2D col)
     {

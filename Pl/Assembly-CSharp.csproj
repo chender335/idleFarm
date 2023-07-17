@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Items\AmoBust.cs" />
+    <Compile Include="Assets\Walk\Walk.cs" />
     <Compile Include="Assets\Items\ArmorBust.cs" />
     <Compile Include="Assets\HealPoints\HealPoints.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
