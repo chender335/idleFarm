@@ -6,10 +6,11 @@ public class PlayerHealth : HealPoints
 {
     private float maxHealth;
     private float baseArmor;
-    private float armorBustTime = 0;
-
+    private float armorBustTime;
+    
     private void Awake()
     {
+        armorBustTime = 0;
         maxHealth = healPoints;
         baseArmor = armor;
     }

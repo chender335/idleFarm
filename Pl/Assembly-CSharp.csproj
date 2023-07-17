@@ -68,8 +68,9 @@
     <Compile Include="Assets\Shooting\PlayerShoot.cs" />
     <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
     <Compile Include="Assets\Shooting\GunInfo.cs" />
-    <Compile Include="Assets\HealPoints\Enemy.cs" />
+    <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
     <Compile Include="Assets\Items\IPickable.cs" />
+    <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

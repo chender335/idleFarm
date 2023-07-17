@@ -5,13 +5,25 @@ public abstract class HealPoints : MonoBehaviour
 {
     [SerializeField] protected float healPoints;
     [SerializeField] protected float armor;
+    [SerializeField] protected ObjectsDamageGroup myGroup;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<ICanDealDamage>() != null)
+        ICanDealDamage damager = collision.collider.GetComponent<ICanDealDamage>();
+        if (damager != null && (damager.DamagesGroup == myGroup || damager.DamagesGroup == ObjectsDamageGroup.Everybody))
         {
             TakeDamage(collision.collider.GetComponent<ICanDealDamage>().Damage);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        ICanDealDamage damager = collision.GetComponent<ICanDealDamage>();
+        if (damager != null && (damager.DamagesGroup == myGroup || damager.DamagesGroup == ObjectsDamageGroup.Everybody))
+        {
+            TakeDamage(collision.GetComponent<ICanDealDamage>().Damage);
+        }
+        Debug.Log(damager.DamagesGroup == ObjectsDamageGroup.Everybody);
     }
 
     private void TakeDamage(float damage)
@@ -34,4 +46,11 @@ public abstract class HealPoints : MonoBehaviour
     {
         Destroy(gameObject);
     }
+}
+
+public enum ObjectsDamageGroup
+{
+    Enemy,
+    Player,
+    Everybody
 }
