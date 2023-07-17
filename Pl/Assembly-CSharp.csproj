@@ -56,21 +56,21 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Items\AmoBust.cs" />
-    <Compile Include="Assets\Walk\Walk.cs" />
-    <Compile Include="Assets\Items\ArmorBust.cs" />
-    <Compile Include="Assets\HealPoints\HealPoints.cs" />
-    <Compile Include="Assets\Items\MedicBust.cs" />
-    <Compile Include="Assets\Shooting\BulletDamager.cs" />
-    <Compile Include="Assets\HealPoints\ICanDealDamage.cs" />
-    <Compile Include="Assets\Items\PlayerPickUp.cs" />
-    <Compile Include="Assets\Shooting\BulletMover.cs" />
-    <Compile Include="Assets\Shooting\PlayerShoot.cs" />
-    <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
-    <Compile Include="Assets\Shooting\GunInfo.cs" />
-    <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
-    <Compile Include="Assets\Items\IPickable.cs" />
-    <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Items\AmoBust.cs" />
+    <Compile Include="Assets\Scripts\Walk\Walk.cs" />
+    <Compile Include="Assets\Scripts\Items\ArmorBust.cs" />
+    <Compile Include="Assets\Scripts\HealPoints\HealPoints.cs" />
+    <Compile Include="Assets\Scripts\Items\MedicBust.cs" />
+    <Compile Include="Assets\Scripts\Shooting\BulletDamager.cs" />
+    <Compile Include="Assets\Scripts\HealPoints\ICanDealDamage.cs" />
+    <Compile Include="Assets\Scripts\Items\PlayerPickUp.cs" />
+    <Compile Include="Assets\Scripts\Shooting\BulletMover.cs" />
+    <Compile Include="Assets\Scripts\Shooting\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\HealPoints\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Shooting\GunInfo.cs" />
+    <Compile Include="Assets\Scripts\HealPoints\EnemyCollisionDamage.cs" />
+    <Compile Include="Assets\Scripts\Items\IPickable.cs" />
+    <Compile Include="Assets\Scripts\HealPoints\EnemyHealth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
