@@ -50,14 +50,7 @@ public class Walk : MonoBehaviour
     void Run()
     {
         Vector3 dir = transform.right * Input.GetAxis("Horizontal");
-        if(Input.GetAxis("Horizontal")>0)
-        {
-            transform.position = Vector3.MoveTowards(transform.position,transform.position + dir,speed * Time.deltaTime);
-        }
-        else if(Input.GetAxis("Horizontal")<0)
-        {
-            transform.position = Vector3.MoveTowards(transform.position,transform.position + dir,speed * Time.deltaTime);
-        }
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
         sprite.flipX = dir.x < 0f;
     }
 
