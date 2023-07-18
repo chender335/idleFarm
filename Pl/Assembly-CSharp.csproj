@@ -59,18 +59,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Items\IPickable.cs" />
+    <Compile Include="Assets\Traps\MoveBetweenPoints.cs" />
     <Compile Include="Assets\Shooting\GunInfo.cs" />
     <Compile Include="Assets\Items\ArmorBust.cs" />
     <Compile Include="Assets\Items\AmoBust.cs" />
+    <Compile Include="Assets\Traps\ObjectToMove.cs" />
     <Compile Include="Assets\Items\PlayerPickUp.cs" />
     <Compile Include="Assets\Shooting\PlayerShoot.cs" />
     <Compile Include="Assets\Walk\Walk.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
     <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
     <Compile Include="Assets\Animations\Frog\Animation.cs" />
+    <Compile Include="Assets\Traps\Point.cs" />
     <Compile Include="Assets\Shooting\BulletMover.cs" />
     <Compile Include="Assets\HealPoints\ICanDealDamage.cs" />
     <Compile Include="Assets\HealPoints\HealPoints.cs" />
+    <Compile Include="Assets\Traps\ObjectToMoveAnimation.cs" />
     <Compile Include="Assets\Shooting\BulletDamager.cs" />
     <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
     <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
