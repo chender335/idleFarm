@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638252175458943492
-    m_Hash: 2024468254
+      ticks: 638252256241024644
+    m_Hash: 3729331494
   m_LockFileStatus:
     m_FilePath: D:/GitHub/idleFarm/Pl/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638252175666993557
-    m_Hash: 2801096086
+      ticks: 638252256241034617
+    m_Hash: 1743005749
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

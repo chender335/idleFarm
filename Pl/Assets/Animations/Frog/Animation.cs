@@ -5,21 +5,55 @@ using UnityEngine;
 public class Animation : MonoBehaviour
 {
 
+    private bool isGround=false;
+
     private Animator anim;
 
-    void Start()
+    void Awake()
     {
         anim = GetComponent<Animator>();
     }
 
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Ground")
+        {
+        isGround = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Ground")
+        {
+        isGround = false;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if(!isGround)
+        {
+            State = States.Jump;
+        }
+        else
+        {
+            State = States.Idle;
+        }
+        if(Input.GetButton("Horizontal") && isGround)
+        {
+            State = States.Run;
+        }
+    }
+
     void Update()
     {
-            State = States.Idle;
     }
 
     public enum States
     {
-        Idle
+        Idle,
+        Run,
+        Jump
     }
     States State
     {
