@@ -7,11 +7,11 @@ public class MoveBetweenPoints : MonoBehaviour
     public float MoveSpeed => moveSpeed;
     public float WaitOnPointTime => waitOnPointTime;
     public bool MoveWithAcceleration => moveWithAcceleration;
-    public float Acceleration => acceleration;
+    /*public float Acceleration => acceleration;*/
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float waitOnPointTime;
-    [SerializeField] private float acceleration;
+    /*[SerializeField] private float acceleration;*/
     [SerializeField] private bool moveWithAcceleration;
 
     private void Awake()
