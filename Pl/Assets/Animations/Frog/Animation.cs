@@ -14,16 +14,17 @@ public class Animation : MonoBehaviour
 
     void Update()
     {
-            State = States.Idle;
+        State = States.Idle;
     }
 
-    public enum States
-    {
-        Idle
-    }
     States State
     {
         get {return(States)anim.GetInteger("state");}
         set {anim.SetInteger("state", (int)value);}
     }
+}
+
+public enum States
+{
+    Idle
 }
