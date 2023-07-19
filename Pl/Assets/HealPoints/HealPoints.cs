@@ -34,7 +34,6 @@ public abstract class HealPoints : MonoBehaviour
         {
             TakeDamage(collision.GetComponent<ICanDealDamage>().Damage);
         }
-        Debug.Log(damager.DamagesGroup == ObjectsDamageGroup.Everybody);
     }
 
     protected virtual void TakeDamage(float damage)

@@ -16,7 +16,7 @@ public class ObjectToMoveAround : MonoBehaviour
 
     private void Update()
     {
-        angle -= moveInfo.Speed /*/ radius*/ * Time.deltaTime;
+        angle -= moveInfo.Speed * Time.deltaTime;
 
         transform.localPosition = new Vector2(radius * Mathf.Cos(angle), radius * Mathf.Sin(angle));
     }

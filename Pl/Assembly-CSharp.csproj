@@ -79,9 +79,11 @@
     <Compile Include="Assets\Shooting\BulletMover.cs" />
     <Compile Include="Assets\HealPoints\ICanDealDamage.cs" />
     <Compile Include="Assets\HealPoints\HealPoints.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Shooting\BulletDamager.cs" />
     <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
     <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
+    <Compile Include="Assets\Traps\Arrow\Arrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
