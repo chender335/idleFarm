@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : HealPoints
 {
+    public static Action OnPlayerDamaged;
+
     private float maxHealth;
     private float baseArmor;
     private float armorBustTime;
@@ -15,8 +17,9 @@ public class PlayerHealth : HealPoints
         baseArmor = armor;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if(armorBustTime >= 0)
         {
             armorBustTime -= Time.deltaTime;
@@ -31,6 +34,12 @@ public class PlayerHealth : HealPoints
     {
         SceneManager.LoadScene(0);
         base.Die();
+    }
+
+    protected override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+        OnPlayerDamaged?.Invoke();
     }
 
     private void Heal(float healAmount)
