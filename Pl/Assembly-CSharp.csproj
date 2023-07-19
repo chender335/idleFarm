@@ -59,9 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Items\IPickable.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\ObjectToMoveAround.cs" />
     <Compile Include="Assets\Shooting\GunInfo.cs" />
     <Compile Include="Assets\Items\ArmorBust.cs" />
     <Compile Include="Assets\Items\AmoBust.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\MoveAround.cs" />
     <Compile Include="Assets\Traps\Saw\ObjectToMove.cs" />
     <Compile Include="Assets\Items\PlayerPickUp.cs" />
     <Compile Include="Assets\Traps\Saw\SawDamager.cs" />
