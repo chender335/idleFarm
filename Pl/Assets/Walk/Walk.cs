@@ -8,10 +8,13 @@ public class Walk : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float speed;
 
+    int jumpNum;
+
     public SpriteRenderer sprite;
     private Rigidbody2D rb;
 
     bool isGround=false;
+    bool isWall=false;
 
     private void Awake()
     {
@@ -24,6 +27,12 @@ public class Walk : MonoBehaviour
         if(col.gameObject.tag == "Ground")
         {
         isGround = true;
+        jumpNum = 1;
+        }
+        if(col.gameObject.tag == "Wall")
+        {
+        isWall = true;
+        jumpNum = 1;
         }
     }
 
@@ -33,15 +42,23 @@ public class Walk : MonoBehaviour
         {
         isGround = false;
         }
+        if(col.gameObject.tag == "Wall")
+        {
+        isWall = false;
+        }
     }
 
     void Update()
     {
-        if(Input.GetButtonDown("Jump") && isGround)
+        if(Input.GetButtonDown("Jump") && (jumpNum != 0))
         {
-            Jump();
+            Jump(1);
         }
-        if(Input.GetButton("Horizontal"))
+        else if (Input.GetButtonDown("Jump") && (jumpNum != 0))
+        {
+            Jump(2);
+        }
+        if(Input.GetButton("Horizontal") && !(Input.GetButtonDown("Jump") && isWall))
         {
             Run();
         }   
@@ -49,13 +66,23 @@ public class Walk : MonoBehaviour
 
     void Run()
     {
-        Vector3 dir = transform.right * Input.GetAxis("Horizontal");
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
-        sprite.flipX = dir.x < 0f;
+        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
+        sprite.flipX = Input.GetAxis("Horizontal") < 0f;
     }
 
-    void Jump()
+    void Jump(int num)
     {
-        rb.velocity = Vector2.up * jumpForce;
+        switch(num)
+        {
+            case 1:
+            rb.velocity = Vector2.up * jumpForce;
+            jumpNum -= 1;
+            break;
+            case 2:
+            rb.velocity = Vector2.up * jumpForce;
+            jumpNum -= 1;
+            //rb.velocity = Vector2.right * Input.GetAxis("Horizontal") * speed * -1;
+            break;
+        }
     }
 }

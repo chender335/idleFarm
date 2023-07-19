@@ -6,6 +6,9 @@ public class Animation : MonoBehaviour
 {
 
     private bool isGround=false;
+    private bool isWall=false;
+
+    int jumpNum;
 
     private Animator anim;
 
@@ -19,6 +22,12 @@ public class Animation : MonoBehaviour
         if(col.gameObject.tag == "Ground")
         {
         isGround = true;
+        jumpNum = 1;
+        }
+        if(col.gameObject.tag == "Wall")
+        {
+        isWall = true;
+        jumpNum = 1;
         }
     }
     void OnCollisionExit2D(Collision2D col)
@@ -27,33 +36,50 @@ public class Animation : MonoBehaviour
         {
         isGround = false;
         }
-    }
-
-    void FixedUpdate()
-    {
-        if(!isGround)
+        if(col.gameObject.tag == "Wall")
         {
-            State = States.Jump;
-        }
-        else
-        {
-            State = States.Idle;
-        }
-        if(Input.GetButton("Horizontal") && isGround)
-        {
-            State = States.Run;
+        isWall = false;
         }
     }
 
     void Update()
     {
+        if(Input.GetButtonDown("Jump"))
+        {
+            jumpNum -= 1;
+        }
+        if(!isGround)
+        {
+            if(isWall && Input.GetButton("Horizontal"))
+        {
+            State = States.Wall;
+        }
+        else if(jumpNum <= 0)
+        {
+            State = States.DoubleJump;
+        }
+        else
+        {
+            State = States.Jump;
+        }
+        }
+        else if(Input.GetButton("Horizontal") && isGround)
+        {
+            State = States.Run;
+        }
+        else
+        {
+            State = States.Idle;
+        }
     }
 
     public enum States
     {
         Idle,
         Run,
-        Jump
+        Jump,
+        Wall,
+        DoubleJump
     }
     States State
     {
