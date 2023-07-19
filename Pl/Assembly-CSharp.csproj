@@ -69,6 +69,7 @@
     <Compile Include="Assets\Shooting\PlayerShoot.cs" />
     <Compile Include="Assets\Traps\Saw\ObjectToMoveAnimation.cs" />
     <Compile Include="Assets\Walk\Walk.cs" />
+    <Compile Include="Assets\Traps\Spikes\SpikesDamage.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
     <Compile Include="Assets\Traps\Saw\Point.cs" />
     <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
