@@ -4,11 +4,9 @@ public class MoveAround : MonoBehaviour
 {
     public float StratAngle => stratAngle;
     public float Speed => speed;
-    public bool IsLooped => isLooped;
 
     [SerializeField] private float stratAngle;
     [SerializeField] private float speed;
-    [SerializeField] private bool isLooped;
     [SerializeField] private float chainOffset;
     [SerializeField] private GameObject chainPrefab;
 

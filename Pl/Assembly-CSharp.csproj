@@ -66,11 +66,13 @@
     <Compile Include="Assets\Traps\SpikeBall\MoveAround.cs" />
     <Compile Include="Assets\Traps\Saw\ObjectToMove.cs" />
     <Compile Include="Assets\Items\PlayerPickUp.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\SpikeBall.cs" />
     <Compile Include="Assets\Traps\Saw\SawDamager.cs" />
     <Compile Include="Assets\Traps\Saw\MoveBetweenPoints.cs" />
     <Compile Include="Assets\Shooting\PlayerShoot.cs" />
     <Compile Include="Assets\Traps\Saw\ObjectToMoveAnimation.cs" />
     <Compile Include="Assets\Walk\Walk.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\SpikeBallDamage.cs" />
     <Compile Include="Assets\Traps\Spikes\SpikesDamage.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
     <Compile Include="Assets\Traps\Saw\Point.cs" />
@@ -79,7 +81,6 @@
     <Compile Include="Assets\Shooting\BulletMover.cs" />
     <Compile Include="Assets\HealPoints\ICanDealDamage.cs" />
     <Compile Include="Assets\HealPoints\HealPoints.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Shooting\BulletDamager.cs" />
     <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
     <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
