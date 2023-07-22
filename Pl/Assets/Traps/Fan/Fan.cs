@@ -8,7 +8,9 @@ public class Fan : MonoBehaviour
     [SerializeField] private string onAnimationName = "On";
     [SerializeField] private string offAnimationName = "Off";
 
+#pragma warning disable CS0108 // „лен скрывает унаследованный член: отсутствует новое ключевое слово
     private BoxCollider2D collider;
+#pragma warning restore CS0108 // „лен скрывает унаследованный член: отсутствует новое ключевое слово
     private AreaEffector2D effector;
     private Animator animator;
     private float timeRemainedToSwitch;

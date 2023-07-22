@@ -22,6 +22,7 @@ public class MoveAround : MonoBehaviour
             if(transform.GetChild(i).GetComponent<ObjectToMoveAround>() != null)
             {
                 spawnDirection = transform.GetChild(i).position;
+                moovObjectSortingLayer = transform.GetChild(i).GetComponent<SpriteRenderer>().sortingOrder;
                 radius = Vector2.SqrMagnitude((transform.GetChild(i).position - transform.position));
             }
         }

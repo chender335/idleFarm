@@ -17,7 +17,9 @@ public class FallingPlatform : MonoBehaviour
     private Vector2 moveDirection;
 
     private Animator animator;
+#pragma warning disable CS0108 // „лен скрывает унаследованный член: отсутствует новое ключевое слово
     private Collider2D collider;
+#pragma warning restore CS0108 // „лен скрывает унаследованный член: отсутствует новое ключевое слово
 
     private void Awake()
     {
