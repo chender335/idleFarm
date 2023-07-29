@@ -7,20 +7,19 @@ public class MoveBetweenPoints : MonoBehaviour
     public List<Vector2> Points { get; private set; }
     public float MoveSpeed => moveSpeed;
     public float WaitOnPointTime => waitOnPointTime;
-    public bool MoveWithAcceleration => moveWithAcceleration;
-    /*public float Acceleration => acceleration;*/
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private float waitOnPointTime;
-    /*[SerializeField] private float acceleration;*/
-    [SerializeField] private bool moveWithAcceleration;
     [SerializeField] private GameObject chainPrefab;
     [SerializeField] private float chainOffset;
+
+    private int moovObjectSortingLayer;
 
     private void Awake()
     {
         GetPointsPosition();
         CreateChain();
+        moovObjectSortingLayer = GetComponentInChildren<ObjectToMove>().GetComponent<SpriteRenderer>().sortingOrder;
     }
 
     private void GetPointsPosition()
@@ -43,7 +42,6 @@ public class MoveBetweenPoints : MonoBehaviour
 
     private void CreateChain()
     {
-        Debug.Log(1);
         if (Points == null)
         {
             return;
@@ -71,8 +69,10 @@ public class MoveBetweenPoints : MonoBehaviour
 
         for(int i = 0; i < n + 1; i++)
         {
-            Instantiate(chainPrefab, spawnPos, Quaternion.identity).transform.parent = transform;
-            spawnPos = Vector2.MoveTowards(spawnPos, pos2 * (float)1.2 , chainOffset);
+            GameObject chain =  Instantiate(chainPrefab, spawnPos, Quaternion.identity);
+            chain.transform.parent = transform;
+            chain.GetComponent<SpriteRenderer>().sortingOrder = moovObjectSortingLayer - 1;
+            spawnPos = Vector2.MoveTowards(spawnPos, pos2, chainOffset);
         }
     }
 

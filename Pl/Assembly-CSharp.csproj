@@ -58,26 +58,39 @@
     <Analyzer Include="F:\Editors\2022.3.5f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Traps\Fan\Fan.cs" />
     <Compile Include="Assets\Items\IPickable.cs" />
-    <Compile Include="Assets\Traps\MoveBetweenPoints.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\ObjectToMoveAround.cs" />
     <Compile Include="Assets\Shooting\GunInfo.cs" />
     <Compile Include="Assets\Items\ArmorBust.cs" />
     <Compile Include="Assets\Items\AmoBust.cs" />
-    <Compile Include="Assets\Traps\ObjectToMove.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\MoveAround.cs" />
+    <Compile Include="Assets\Traps\Saw\ObjectToMove.cs" />
     <Compile Include="Assets\Items\PlayerPickUp.cs" />
+    <Compile Include="Assets\Traps\RockHead\RockHeadMove.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\SpikeBall.cs" />
+    <Compile Include="Assets\Traps\Saw\SawDamager.cs" />
+    <Compile Include="Assets\Traps\Saw\MoveBetweenPoints.cs" />
     <Compile Include="Assets\Shooting\PlayerShoot.cs" />
+    <Compile Include="Assets\Traps\Saw\ObjectToMoveAnimation.cs" />
     <Compile Include="Assets\Walk\Walk.cs" />
+    <Compile Include="Assets\Traps\SpikeBall\SpikeBallDamage.cs" />
+    <Compile Include="Assets\Traps\Spikes\SpikesDamage.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
+    <Compile Include="Assets\Traps\Batoot\Batoot.cs" />
+    <Compile Include="Assets\Traps\Saw\Point.cs" />
     <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
     <Compile Include="Assets\Animations\Frog\Animation.cs" />
-    <Compile Include="Assets\Traps\Point.cs" />
     <Compile Include="Assets\Shooting\BulletMover.cs" />
     <Compile Include="Assets\HealPoints\ICanDealDamage.cs" />
+    <Compile Include="Assets\Traps\Fire trap\FireTrapDamage.cs" />
     <Compile Include="Assets\HealPoints\HealPoints.cs" />
-    <Compile Include="Assets\Traps\ObjectToMoveAnimation.cs" />
+    <Compile Include="Assets\Traps\FallingPlatform\FallingPlatform.cs" />
     <Compile Include="Assets\Shooting\BulletDamager.cs" />
     <Compile Include="Assets\HealPoints\PlayerHealth.cs" />
+    <Compile Include="Assets\Traps\Fire trap\FireTrap.cs" />
     <Compile Include="Assets\HealPoints\EnemyHealth.cs" />
+    <Compile Include="Assets\Traps\Arrow\Arrow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
