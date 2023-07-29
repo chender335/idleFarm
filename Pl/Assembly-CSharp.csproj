@@ -77,6 +77,7 @@
     <Compile Include="Assets\Traps\SpikeBall\SpikeBallDamage.cs" />
     <Compile Include="Assets\Traps\Spikes\SpikesDamage.cs" />
     <Compile Include="Assets\Items\MedicBust.cs" />
+    <Compile Include="Assets\Traps\Batoot\Batoot.cs" />
     <Compile Include="Assets\Traps\Saw\Point.cs" />
     <Compile Include="Assets\HealPoints\EnemyCollisionDamage.cs" />
     <Compile Include="Assets\Animations\Frog\Animation.cs" />

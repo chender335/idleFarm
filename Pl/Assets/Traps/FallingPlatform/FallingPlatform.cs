@@ -66,11 +66,15 @@ public class FallingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Fall();
+        if (collision.GetContact(0).normal == Vector2.down)
+        {
+            Fall();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         Fall();
     }
 

@@ -37,8 +37,7 @@ public class FireTrap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(213);
-        if(burnStage == BurnStage.Off)
+        if(burnStage == BurnStage.Off && collision.GetContact(0).normal == Vector2.down)
         {
             SetNextStage();
         }
@@ -48,14 +47,12 @@ public class FireTrap : MonoBehaviour
     {
         if(burnStage == BurnStage.Off)
         {
-            Debug.Log(1);
             timeRemained = timeToBurn;
             burnStage = BurnStage.Hit;
             animator.Play("Hit");
         }
         else if(burnStage == BurnStage.Hit)
         {
-            Debug.Log(2);
             timeRemained = burnTime;
             burnStage = BurnStage.On;
             OnFireStateChanged?.Invoke(true);
@@ -63,7 +60,6 @@ public class FireTrap : MonoBehaviour
         }
         else
         {
-            Debug.Log(3);
             OnFireStateChanged?.Invoke(false);
             burnStage = BurnStage.Off;
             animator.Play("Off");
